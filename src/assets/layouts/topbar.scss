@@ -29,5 +29,118 @@
         margin-left: 16px;
     }
 
+    .searchGloble {
+        cursor: pointer;
 
+        .p-input-icon {
+            color: rgb(53, 50, 50);
+            pointer-events: none;
+            font-size: 16px;
+            z-index: 9;
+            cursor: pointer;
+            left: 9px;
+        }
+
+        .p-inputtext[type="search"] {
+            cursor: pointer;
+            background: #FFF;
+            padding: .5rem 1rem;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            outline: none;
+            border: 1px solid #CCCCCC;
+            transition: all .5s;
+
+            &:hover {
+                background: gray;
+            }
+
+
+        }
+
+        .p-inputtext[type="search"]:focus {
+            width: 300px;
+            top: 0;
+            right: 100%;
+            border-radius: 6px;
+            padding: 2px 28px;
+            height: 34px;
+            outline: none;
+            box-shadow: none;
+
+            &:hover {
+                background: #ffffff;
+            }
+        }
+    }
+
+    .profile-details {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 8px;
+        cursor: pointer;
+
+        .profile-name {
+            color: #495057;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .profile-job {
+            color: #6c757d;
+            font-size: 12px;
+        }
+    }
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+.topbaroverlay{
+    &.p-overlaypanel{
+        &::before{
+            display: none;
+        }
+        &::after{
+            display: none;
+        }
+        .p-overlaypanel-content{
+            padding: 0px;
+            width: 150px;
+
+            ul{
+                padding: 0px;
+                li{
+                    padding: 4px 16px;
+                    list-style: none;
+                    text-decoration: none;
+                    cursor: pointer;
+                    .pi{
+                        margin-right: 8px;
+                    }
+                    &:hover{
+                        background-color: #9a9af3;
+                    }
+                }
+            }
+        }
+    }
 }

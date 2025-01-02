@@ -1,7 +1,45 @@
 <div class="layout-topbar">
-    <img alt="app logo" class="app-logo"
-            src="https://github.com/neeerajgupta/image/blob/main/logo1.png?raw=true">
-            <h5 class="app-name" >Neeraj</h5>
-   
-   
+    <div class="p-col-12 p-d-flex p-jc-between p-ai-center p-text-center p-p-0">
+        <div class="p-d-flex p-ai-center p-text-center">
+            <img alt="app logo" class="app-logo"
+                src="https://github.com/neeerajgupta/image/blob/main/logo1.png?raw=true">
+            <h5 class="app-name">Neeraj</h5>
+        </div>
+
+
+        <!-- <div style="text-align:right;">
+        <input type="search" id="search" class="pi pi-search" />
+        </div> -->
+
+        <div class="p-d-flex p-ai-center">
+            <p-iconField iconPosition="left" class="searchGloble">
+                <p-inputIcon styleClass="pi pi-search" />
+                <input type="search" pInputText placeholder="Search" />
+            </p-iconField>
+
+            <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                styleClass="p-mr-2 p-ml-3" shape="circle" />
+
+            <span class="profile-details" (click)="op.toggle($event)">
+                <span class="profile-name">Neeraj Gupta</span>
+                <span class="profile-job">Developer</span>
+            </span>
+            <i class="pi pi-angle-down" (click)="op.toggle($event)"></i>
+
+
+
+        </div>
+
+       
+    </div>
 </div>
+
+
+<p-overlayPanel #op styleClass="topbaroverlay">
+    <ul>
+     <li><i class="pi pi-user"></i>Profile</li>
+     <li><i class="pi pi-inbox"></i>Inbox</li>
+     <li><i class="pi pi-power-off"></i>Sign Out</li>
+    
+    </ul>
+ </p-overlayPanel>
