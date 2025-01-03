@@ -1,0 +1,139 @@
+<!-- <app-breadcrumb [items]="breadCrumbData"></app-breadcrumb> -->
+<p-card>
+    <h1 class="p-mb-5">
+        Add a New Order
+    </h1>
+    <form [formGroup]="orderForm">
+        <section>
+            <h3>Sender Details</h3>
+            <div class="p-fluid p-grid">
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Customer Name</label>
+                    <p-inputGroup class="p-mt-2">
+                        <p-inputGroupAddon>
+                            <i class="pi pi-user"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="Username" />
+                    </p-inputGroup>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Customer Phone</label>
+                    <p-inputGroup class="p-mt-2">
+                        <p-inputGroupAddon>
+                            <i class="pi pi-phone"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="Username" />
+                    </p-inputGroup>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Customer Email</label>
+                    <p-inputGroup class="p-mt-2">
+                        <p-inputGroupAddon>
+                            <i class="pi pi-envelope"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="Username" />
+                    </p-inputGroup>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Sender Address</h3>
+            <div class="p-fluid p-grid">
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Full Address</label>
+                    <p-inputGroup class="p-mt-2">
+                        <p-inputGroupAddon>
+                            <i class="pi pi-map-marker"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="Address" />
+                    </p-inputGroup>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Landmark</label>
+                    <p-inputGroup class="p-mt-2">
+                        <p-inputGroupAddon>
+                            <i class="pi pi-building"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="Landmark" />
+                    </p-inputGroup>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Pincode</label>
+                    <p-inputGroup class="p-mt-2">
+                        <p-inputGroupAddon>
+                            <i class="pi pi-lock"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="Pincode" />
+                    </p-inputGroup>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">State</label>
+                    <p-inputGroup class="p-mt-2">
+                        <p-inputGroupAddon>
+                            <i class="pi pi-globe"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="State" />
+                    </p-inputGroup>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">City</label>
+                    <p-inputGroup class="p-mt-2">
+                        <p-inputGroupAddon>
+                            <i class="pi pi-compass"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="State" />
+                    </p-inputGroup>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Order Details</h3>
+            <div class="p-fluid p-grid">
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Order ID</label>
+                    <input class="p-mt-2" pInputText id="name" formControlName="name" />
+                    <small class="text-danger"
+                        *ngIf="orderForm.get('customerDetails.name')?.invalid && orderForm.get('customerDetails.name')?.touched">
+                        Name is required.
+                    </small>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Order Date</label>
+                    <input class="p-mt-2" pInputText id="name" formControlName="name" />
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Payment Mode</label>
+                    <p-dropdown styleClass="p-mt-2"
+                    [options]="cities()"
+                    optionLabel="name"
+                    placeholder="Select Mode" />
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Invoice Amount</label>
+                    <input class="p-mt-2" pInputText id="name" formControlName="name" />
+                    <small class="text-danger"
+                        *ngIf="orderForm.get('customerDetails.name')?.invalid && orderForm.get('customerDetails.name')?.touched">
+                        Name is required.
+                    </small>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Customer Phone</label>
+                    <input class="p-mt-2" pInputText id="name" formControlName="name" />
+                    <small class="text-danger"
+                        *ngIf="orderForm.get('customerDetails.name')?.invalid && orderForm.get('customerDetails.name')?.touched">
+                        Name is required.
+                    </small>
+                </div>
+                <div class="p-col-3 md:col-4">
+                    <label for="name">Customer Email</label>
+                    <input class="p-mt-2" pInputText id="name" formControlName="name" />
+                    <small class="text-danger"
+                        *ngIf="orderForm.get('customerDetails.name')?.invalid && orderForm.get('customerDetails.name')?.touched">
+                        Name is required.
+                    </small>
+                </div>
+            </div>
+        </section>
+    </form>
+
+</p-card>

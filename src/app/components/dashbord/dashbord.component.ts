@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// import { BreadcrumbComponent } from '../../layouts/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-dashbord',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: './dashbord.component.html',
   styleUrl: './dashbord.component.scss'
 })
-export class DashbordComponent {
-
+export class DashbordComponent implements OnInit {
+  breadCrumbData: any;
+  ngOnInit(): void {
+    // this.breadCrumbData = [
+    //   { label: 'Dashboard' },
+  
+    // ];
+  }
+ 
 }

@@ -1,9 +1,9 @@
 <div class="layout-sidebar">
     <div class="layout-menu-container">
         <ul>
-            @for(item of items; track item ; ){
+            @for(item of items; track item ){
 
-            <li [class]=item.icon></li>
+            <li class="p-mb-4" (click) = "routeMenu(item.route)" [class]=item.icon></li>
 
             }
         </ul>

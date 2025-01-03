@@ -5,7 +5,7 @@ import { TopbarComponent } from "./layouts/topbar/topbar.component";
 import { SidebarComponent } from "./layouts/sidebar/sidebar.component";
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { MenuItem } from 'primeng/api';
-
+ 
 @Component({
   selector: 'app-root',
   standalone: true,
