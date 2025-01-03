@@ -1,7 +1,7 @@
 .layout-sidebar {
     background: #ffffff;
     position: fixed;
-    width: 70px;
+    width: 66px;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -11,14 +11,37 @@
 
     .layout-menu-container {
         text-align: center;
-        ul{
+
+        ul {
             padding: 0px;
             display: flex;
             flex-direction: column;
-            li{
-                padding: 10px 16px;
+
+            li {
+                margin-left: 16px;
                 font-size: 24px;
                 color: #495057;
+                margin-bottom: 16px;
+                height: 36px;
+                width: 36px;
+                border: 1px solid rgb(255, 255, 255);
+                border-radius: 50%;
+                padding: 4px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                &:hover {
+                    border: 1px solid rgb(255, 255, 255);
+                    font-size: 24px;
+                    background: #f6f9fc;
+                    height: 36px;
+                    width: 36px;
+                    padding: 4px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                }
             }
         }
     }

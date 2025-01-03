@@ -3,7 +3,8 @@
         <ul>
             @for(item of items; track item ){
 
-            <li class="p-mb-4" (click) = "routeMenu(item.route)" [class]=item.icon></li>
+            <li class=" sidebarItems" (click) = "routeMenu(item.route)" [class]=item.icon   [pTooltip]="item.label" 
+            tooltipPosition="right" ></li>
 
             }
         </ul>

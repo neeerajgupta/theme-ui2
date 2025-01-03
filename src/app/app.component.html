@@ -1,10 +1,17 @@
 <div class="p-d-flex layout-container">
     <app-topbar></app-topbar>
     <app-sidebar></app-sidebar>
+
     <div class="layout-content">
 
-        <!-- <p-breadcrumb class="max-w/-full" [model]="items" [home]="home" styleClass="bradcrum" /> -->
+        <div class="p-mb-3">
+            <p-breadcrumb class="max-w/-full" [model]="items" [home]="home" styleClass="bradcrum" />
+        </div>
+      
+       <div class="layout-section">
         <router-outlet></router-outlet>
+       </div>
 
     </div>
+  
 </div>

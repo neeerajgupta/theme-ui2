@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { TooltipModule } from 'primeng/tooltip';
 
 import { TieredMenuModule } from 'primeng/tieredmenu';
 
 @Component({
     selector: 'app-sidebar',
     standalone: true,
-    imports: [TieredMenuModule, CommonModule, FormsModule],
+    imports: [TieredMenuModule, CommonModule, FormsModule,TooltipModule],
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss'
 })
@@ -23,6 +24,11 @@ export class SidebarComponent implements OnInit {
                 label: 'File',
                 icon: 'pi pi-home',
                 route : '/dashbord',
+                tooltipOption:{
+                    tooltipLabel:"Dashbord",
+                    tooltipPosition:"right"
+
+                },
                 items: [
                     {
                         label: 'New',
@@ -70,6 +76,7 @@ export class SidebarComponent implements OnInit {
             {
                 label: 'Search',
                 icon: 'pi pi-th-large',
+                route : '/order',
                 
             },
             {
@@ -91,8 +98,8 @@ export class SidebarComponent implements OnInit {
 
     routeMenu(route : any) {
         console.log('hi')
-
-        console.log(route)
+       
+        // console.log(route)
         this.router.navigate([`${route}`])
         
     }

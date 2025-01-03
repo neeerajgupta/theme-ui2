@@ -1,6 +1,23 @@
-<!-- <app-breadcrumb [items]="breadCrumbData"></app-breadcrumb> -->
+<!-- <div class="p-mb-3">
+    <app-breadcrumb [items]="breadCrumbData"></app-breadcrumb>
+</div> -->
 
 <div class="dashbord">
+
+    <div class="profilepic">
+        <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+            styleClass="mr-2 dashbordavater" size="xlarge" shape="circle" />
+
+        <div class="p-ml-3">
+            <span class="avatername">Neeraj, <strong class="">Ajit</strong></span>
+            <div class="avaternameposi">03 January 2025, Fri</div>
+        </div>
+    </div>
+
+
+
+
+
 
     <div class="p-d-flex p-flex-wrap p-col-12 p-jc-between">
         <div class="dashbordCard p-col-3 p-p-0">
@@ -63,28 +80,196 @@
     </div>
 
 
-    <div class="p-d-flex p-flex-wrap p-grid  p-jc-between p-p-0" >
-        <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-5 p-pr-2 p-p-0 p-mb-3 overviewdashbord" ></div>
-        <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-3 p-pr-2 p-p-0 p-mb-3 overviewdashbord"></div>
-        <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-3 p-pr-2 p-p-0 p-mb-3 overviewdashbord"></div>
+    <div class="p-d-flex p-jc-between p-flex-wrap">
+        <p-card [style]="{ width: '360px' }">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="../../../assets/graph.svg" />
+            </ng-template>
+            <div class="profilepic">
+                <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                    styleClass="mr-2 dashbordavater" shape="circle" />
+
+                <div class="p-ml-3 p-d-flex p-flex-column">
+                    <span>Neeraj, <strong class="">Ajit</strong></span>
+                    <a class="color-blue">03 January 2025, Fri</a>
+                </div>
+            </div>
+            <div class="profilepic">
+                <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                    styleClass="mr-2 dashbordavater" shape="circle" />
+
+                <div class="p-ml-3 p-d-flex p-flex-column">
+                    <span>Neeraj, <strong class="">Ajit</strong></span>
+                    <a class="color-blue">03 January 2025, Fri</a>
+                </div>
+            </div>
+            <div class="profilepic">
+                <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                    styleClass="mr-2 dashbordavater" shape="circle" />
+
+                <div class="p-ml-3 p-d-flex p-flex-column">
+                    <span>Neeraj, <strong class="">Ajit</strong></span>
+                    <a class="color-blue">03 January 2025, Fri</a>
+                </div>
+            </div>
+            <div class="profilepic">
+                <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                    styleClass="mr-2 dashbordavater" shape="circle" />
+
+                <div class="p-ml-3 p-d-flex p-flex-column">
+                    <span>Neeraj, <strong class="">Ajit</strong></span>
+                    <a class="color-blue">03 January 2025, Fri</a>
+                </div>
+            </div>
+
+        </p-card>
+
+
+        <p-card [style]="{ width: '360px' }">
+            <ng-template pTemplate="header">
+                <div>
+                    <h4 class="p-m-0">Leads By Region</h4>
+                </div>
+            </ng-template>
+           <div class="p-mt-3">
+            <p-tabView>
+                <p-tabPanel header="India">
+                    <p>
+                        Lorem ipsum dolor sit amet...
+                    </p>
+                </p-tabPanel>
+                <p-tabPanel header="Shree Lanka">
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+                    </p>
+                </p-tabPanel>
+            </p-tabView>
+           </div>
+
+        </p-card>
+
+        <p-card [style]="{ width: '360px' }">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="../../../assets/graph.svg" />
+            </ng-template>
+            <div class="profilepic">
+                <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                    styleClass="mr-2 dashbordavater" shape="circle" />
+
+                <div class="p-ml-3 p-d-flex p-flex-column">
+                    <span>Neeraj, <strong class="">Ajit</strong></span>
+                    <a class="color-blue">03 January 2025, Fri</a>
+                </div>
+            </div>
+            <div class="profilepic">
+                <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                    styleClass="mr-2 dashbordavater" shape="circle" />
+
+                <div class="p-ml-3 p-d-flex p-flex-column">
+                    <span>Neeraj, <strong class="">Ajit</strong></span>
+                    <a class="color-blue">03 January 2025, Fri</a>
+                </div>
+            </div>
+            <div class="profilepic">
+                <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                    styleClass="mr-2 dashbordavater" shape="circle" />
+
+                <div class="p-ml-3 p-d-flex p-flex-column">
+                    <span>Neeraj, <strong class="">Ajit</strong></span>
+                    <a class="color-blue">03 January 2025, Fri</a>
+                </div>
+            </div>
+            <div class="profilepic">
+                <p-avatar image="https://raw.githubusercontent.com/neeerajgupta/image/refs/heads/main/neeraj.jpg"
+                    styleClass="mr-2 dashbordavater" shape="circle" />
+
+                <div class="p-ml-3 p-d-flex p-flex-column">
+                    <span>Neeraj, <strong class="">Ajit</strong></span>
+                    <a class="color-blue">03 January 2025, Fri</a>
+                </div>
+            </div>
+
+        </p-card>
+
+
     </div>
 
 
-    <div class="p-d-flex p-flex-wrap p-grid  p-jc-between p-p-0" >
-        <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-3 p-pr-2 p-p-0 p-mb-3 overviewdashbord" ></div>
-        <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-4 p-pr-2 p-p-0 p-mb-3 overviewdashbord"></div>
-        <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-4 p-pr-2 p-p-0 p-mb-3 overviewdashbord"></div>
-    </div>
-
-
-    <div class="p-d-flex p-flex-wrap p-grid  p-jc-between p-p-0" >
-        <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-5 p-pr-2 p-p-0 p-mb-3 overviewdashbord" ></div>
-        <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-6 p-pr-2 p-p-0 p-mb-3 overviewdashbord"></div>
-       
-    </div>
 
 
 
+
+    <p-card [style]="{ width: '100%' }">
+        <ng-template pTemplate="header">
+    
+    
+    
+        </ng-template>
+        <div class="card">
+            <p-table #dt [value]="products" [tableStyle]="{ 'min-width': '75rem' }" [(selection)]="selectedProducts"
+                [rowHover]="true" dataKey="id">
+                <ng-template pTemplate="caption">
+                    <div class="p-d-flex p-ai-center p-jc-between">
+                        <h5 class="p-m-0">Recent Sales</h5>
+                        <span class="p-input-icon-left">
+                            <i class="pi pi-search"></i>
+                            <input pInputText type="text" (input)="dt.filterGlobal($event.target, 'contains')"
+                                placeholder="Search..." />
+                        </span>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>
+                            Image
+                        </th>
+                        <th pSortableColumn="name" style="min-width:15rem">
+                            Name <p-sortIcon field="name" />
+                        </th>
+                        
+                        <th pSortableColumn="price">
+                            Price <p-sortIcon field="price" />
+                        </th>
+                        <th pSortableColumn="category" style="min-width:10rem">
+                            Category <p-sortIcon field="category" />
+                        </th>
+                      
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td>
+                            <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image"
+                                [alt]="product.name" width="50" class="shadow-4" />
+                        </td>
+    
+                        <td>
+                            {{ product.name }}
+                        </td>
+    
+                        <td>
+                            ${{ product.price }}
+                        </td>
+                        <td>
+                            {{ product.category }}
+                        </td>
+    
+                        <td>
+                            <p-button icon="pi pi-search" class="p-mr-2" [rounded]="true" [outlined]="true"
+                                severity="success" />
+    
+                        </td>
+                    </tr>
+                </ng-template>
+    
+            </p-table>
+    
+    
+    
+        </div>
+    
+    </p-card>
 
 
 

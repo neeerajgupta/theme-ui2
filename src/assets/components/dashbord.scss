@@ -1,22 +1,88 @@
-.color-green{
+.color-green {
     color: #27ab83 !important;
 }
-.color-yellow{
+
+.color-yellow {
     color: #de911d !important;
 }
 
-.color-blue{
+.color-blue {
     color: #1992d4 !important;
 }
 
-.color-darkbule{
+.color-darkbule {
     color: #ba6ff4 !important;
 }
 
+// components Csss
+.p-button {
+    padding: 8px 14px;
+    font-size: 12px;
+
+    .p-button-icon {
+        font-size: 12px;
+    }
+}
+
+.p-inputtext {
+    margin: 0;
+    padding: 6px;
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.p-input-icon-left>.p-inputtext {
+    padding-left: 32px;
+}
+
+.p-button.p-button-icon-only.p-button-rounded {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}
+
+.p-tabview {
+    .p-tabview-nav-container {
+        .p-tabview-nav-content {
+            .p-tabview-nav-link {
+                padding: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+
+}
 
 
 
 .dashbord {
+    .profilepic {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .dashbordavater {
+            border: 3px solid #1992d4;
+
+        }
+
+        .avatername {
+            font-size: 22px;
+            font-weight: 300;
+            color: #6c757d;
+        }
+
+        .avaternameposi {
+            font-size: 14px;
+            font-weight: 300;
+            color: #6c757d;
+
+        }
+    }
+
     .dashbordCard {
         background: #ffffff;
         margin-bottom: 1rem;
@@ -47,21 +113,37 @@
         }
     }
 
-
-    .overviewdashbord{
-        background: #ffffff;
-        padding: 1rem;
-        margin-bottom: 1rem;
+    .p-card {
         box-shadow: 0 3px 4px #0000001a, 0 24px 36px #0000000a;
+        padding: 1rem;
         border-radius: 14px;
-        height: 300px;
-       
-        margin-bottom: 6px
+        margin-bottom: 10px;
+
+
+        .p-card-header {
+            .tablecard {
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                background: #f8f9fa;
+                border: 1px solid #dee2e6;
+                padding: 1.25rem;
+                border-radius: 6px;
+                margin-bottom: 16px;
+            }
+        }
+
+
+        .p-card-body {
+            padding: 0px;
+
+            .p-card-content {
+                padding: 0px;
+            }
+        }
 
 
     }
-
-
 
 
 
