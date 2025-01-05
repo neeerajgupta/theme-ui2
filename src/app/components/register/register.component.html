@@ -1,1 +1,48 @@
-<p>register works!</p>
+<div class="loginpage">
+    <div class="p-mb-3">
+        <p-breadcrumb class="max-w/-full" [model]="items" [home]="home" styleClass="bradcrum" />
+    </div>
+
+    <div class="loginForms">
+
+        <p-card [style]="{ width: '420px' }" styleClass="p-pl-6 p-pr-6 p-pt-5 p-pb-5">
+            <ng-template pTemplate="header">
+                <h3 class="p-m-0 p-d-flex">Ajit Raju</h3>
+                <p class="helperText"> Welcome to the Verona Community, where the magic happens, sign in to continue.
+                </p>
+            </ng-template>
+
+            <div class="p-d-flex p-flex-column">
+
+                <p-iconField iconPosition="left" class="p-mb-3">
+                    <p-inputIcon styleClass="pi pi-user" />
+                    <input type="text" pInputText placeholder="Email" class="width" />
+                </p-iconField>
+
+                <p-iconField iconPosition="left" class="p-mb-3">
+                    <p-inputIcon styleClass="pi pi-key" />
+                    <input type="password" pInputText placeholder="Password" class="width" />
+                </p-iconField>
+                <p-button label="Sign in" severity="info" styleClass="width1 p-mb-3"></p-button>
+
+
+
+
+                <div class="p-mt-3 p-d-flex p-flex-column p-ai-center p-mb-5">
+                    <label class="helperText">or sign in with below</label>
+                   <div class="p-mt-3"> <p-avatar icon="pi pi-facebook" styleClass="p-mr-2 p-ml-3" shape="circle" />
+
+                    <p-avatar icon="pi pi-google" styleClass="p-mr-2 p-ml-3" shape="circle" />
+
+                    <p-avatar icon="pi pi-twitter " styleClass="p-mr-2 p-ml-3" shape="circle" />
+
+                    <p-avatar icon="pi pi-github" styleClass="p-mr-2 p-ml-3" shape="circle" /></div>
+                </div>
+
+
+            </div>
+
+        </p-card>
+
+    </div>
+</div>

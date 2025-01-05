@@ -13,13 +13,14 @@ import { TabViewModule } from 'primeng/tabview';
 @Component({
   selector: 'app-dashbord',
   standalone: true,
-  imports: [AvatarModule, CardModule, ButtonModule, TableModule, FormsModule, InputNumberModule, TagModule,InputTextModule,TabViewModule],
+  imports: [AvatarModule, CardModule, ButtonModule, TableModule, FormsModule, InputNumberModule, TagModule,InputTextModule,TabViewModule,BreadcrumbComponent],
   templateUrl: './dashbord.component.html',
   styleUrl: './dashbord.component.scss',
   providers: [ProductService]
 })
 export class DashbordComponent implements OnInit {
   breadCrumbData: any;
+   home: any;
   products: any
   selectedProducts: any
  
@@ -31,10 +32,12 @@ export class DashbordComponent implements OnInit {
   constructor(private productService: ProductService, ) { }
 
   ngOnInit() {
-    // this.breadCrumbData = [
-    //   { label: 'Dashboard' },
+    this.breadCrumbData = [
+      { label: 'Dashboard' },
 
-    // ];
+    ];
+    this.home = { icon: 'pi pi-home', routerLink: '/' };
+  
     this.productService.getProductsSmall().then((products) => {
       this.products = products;
     });

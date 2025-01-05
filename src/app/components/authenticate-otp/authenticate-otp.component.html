@@ -1,1 +1,34 @@
-<p>authenticate-otp works!</p>
+<div class="loginpage">
+    <div class="p-mb-3">
+        <p-breadcrumb class="max-w/-full" [model]="items" [home]="home" styleClass="bradcrum" />
+    </div>
+
+    <div class="loginForms">
+
+        <p-card [style]="{ width: '420px' }" styleClass="p-pl-6 p-pr-6 p-pt-5 p-pb-5">
+            <ng-template pTemplate="header">
+                <h3 class="p-m-0 p-d-flex">Ajit Raju</h3>
+                <p class="helperText"> Welcome to the Verona Community, where the magic happens, sign in to continue.
+                </p>
+            </ng-template>
+
+            <div class="p-d-flex p-flex-column">
+
+                <p-inputOtp [(ngModel)]="value" class="p-mb-3"/>
+
+               
+                <p-button label="Verify" severity="info" styleClass="width1 p-mb-3"></p-button>
+
+                <div class="p-mt-3 p-d-flex p-flex-column p-ai-center p-mb-5">
+                    <label class="helperText">If you didn't get the mail? <strong class="color-lightbule">Send code again</strong></label>
+                </div>
+
+
+
+
+            </div>
+
+        </p-card>
+
+    </div>
+</div>

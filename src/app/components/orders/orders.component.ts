@@ -11,20 +11,23 @@ import { TagModule } from 'primeng/tag';
 import { ToolbarModule } from 'primeng/toolbar';
 import { FileUploadModule } from 'primeng/fileupload';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmationService, MenuItem, MessageService } from 'primeng/api';
 import { InputTextModule } from 'primeng/inputtext';
+import { Breadcrumb, BreadcrumbModule } from 'primeng/breadcrumb';
 
 @Component({
   selector: 'app-orders',
   standalone: true,
- imports: [AvatarModule, CardModule, ButtonModule, TableModule, FormsModule, InputNumberModule, RatingModule,ToolbarModule, TagModule, FileUploadModule, ConfirmDialogModule,InputTextModule],
+ imports: [AvatarModule, CardModule, ButtonModule, TableModule, FormsModule, InputNumberModule, RatingModule,ToolbarModule, TagModule, FileUploadModule, ConfirmDialogModule,InputTextModule,BreadcrumbModule],
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.scss',
    providers: [ProductService,MessageService,ConfirmationService]
 })
 export class OrdersComponent {
 
-
+  items: MenuItem[] | undefined;
+      
+  home: MenuItem | undefined;
   products: any
     selectedProducts: any
     submitted: boolean = false;
@@ -38,10 +41,13 @@ export class OrdersComponent {
     constructor(private productService: ProductService, private messageService: MessageService, private confirmationService: ConfirmationService) { }
   
     ngOnInit() {
-      // this.breadCrumbData = [
-      //   { label: 'Dashboard' },
+      this.items = [
+        { label: 'order' },
   
-      // ];
+      ];
+      this.home = { icon: 'pi pi-home', routerLink: '/' };
+
+
       this.productService.getProductsSmall().then((products) => {
         this.products = products;
       });

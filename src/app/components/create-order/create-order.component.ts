@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormsModule } 
 import { CommonModule } from '@angular/common';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 // import { BreadcrumbComponent } from '../../layouts/breadcrumb/breadcrumb.component';
 
 @Component({
@@ -24,14 +25,15 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     DropdownModule,
     ButtonModule,
     DividerModule,
-    CardModule
+    CardModule,BreadcrumbModule
   ],
   templateUrl: './create-order.component.html',
   styleUrl: './create-order.component.scss'
 })
 export class CreateOrderComponent {
   orderForm: FormGroup | any;
-  // breadCrumbData : any;
+   items : any;
+   home:any
   restrictedDate: Date | undefined;
   countries = [
     { label: 'Saudi Arabia', value: 'SA' },
@@ -42,10 +44,12 @@ export class CreateOrderComponent {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    // this.breadCrumbData = [
-    //   { label: 'Order' },
+    this.items = [
+      { label: 'new order' },
 
-    // ];
+    ];
+    this.home = { icon: 'pi pi-home', routerLink: '/' };
+
     this.orderForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],

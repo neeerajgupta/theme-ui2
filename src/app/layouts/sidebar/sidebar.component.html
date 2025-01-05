@@ -3,8 +3,11 @@
         <ul>
             @for(item of items; track item ){
 
-            <li class=" sidebarItems" (click) = "routeMenu(item.route)" [class]=item.icon   [pTooltip]="item.label" 
-            tooltipPosition="right" ></li>
+            <!-- <li class=" sidebarItems" (click) = "routeMenu(item.route)" [class]=item.icon   [pTooltip]="item.label" 
+            tooltipPosition="right"  ></li> -->
+
+            <li class=" sidebarItems"  [class]=item.icon [pTooltip]="item.label" tooltipPosition="right"
+            (click)="openOverlay($event, item)" ></li>
 
             }
         </ul>
@@ -13,3 +16,15 @@
 
     </div>
 </div>
+
+
+
+<p-overlayPanel #op [dismissable]="true" styleClass="topbaroverlay left">
+    <ng-container *ngIf="selectedItem">
+        <div *ngIf="selectedItem.items">
+            <ul>
+                <li *ngFor="let subItem of selectedItem.items" class=" sidebarItems" (click) = "routeMenu(subItem.route)"> <i [class]=subItem.icon ></i>{{ subItem.label }}</li>
+            </ul>
+        </div>
+    </ng-container>
+</p-overlayPanel>

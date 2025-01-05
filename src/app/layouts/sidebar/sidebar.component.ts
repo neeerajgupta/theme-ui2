@@ -1,20 +1,23 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output, output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, output, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { TooltipModule } from 'primeng/tooltip';
 
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { OverlayPanel, OverlayPanelModule } from 'primeng/overlaypanel';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
     selector: 'app-sidebar',
     standalone: true,
-    imports: [TieredMenuModule, CommonModule, FormsModule,TooltipModule],
+    imports: [TieredMenuModule, CommonModule, FormsModule,TooltipModule,OverlayPanelModule,DialogModule],
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent implements OnInit {
+    @ViewChild('op') overlayPanel!: OverlayPanel;
     items: any;
     constructor(private router: Router) { }
 
@@ -92,15 +95,67 @@ export class SidebarComponent implements OnInit {
                         icon: 'pi pi-whatsapp'
                     }
                 ]
-            }
+            },
+
+
+
+            {
+                label: 'User',
+                icon: 'pi pi-user',
+                tooltipOption:{
+                    tooltipLabel:"User",
+                    tooltipPosition:"right"
+
+                },
+                items: [
+                    {
+                        label: 'Login',
+                        icon: 'pi pi-user',
+                        route : '/login',
+                       
+                    },
+                    {
+                        label: 'forgot',
+                        icon: 'pi pi-user',
+                        route : '/forgotpassword',
+                       
+                    },
+                    {
+                        label: 'register',
+                        icon: 'pi pi-user',
+                        route : '/register',
+                       
+                    },
+                    {
+                        label: 'Auth',
+                        icon: 'pi pi-user',
+                        route : '/auth',
+                       
+                    }
+                ]
+            },
+            
         ]
     }
 
     routeMenu(route : any) {
         console.log('hi')
        
-        // console.log(route)
+        console.log(route)
         this.router.navigate([`${route}`])
-        
+       
     }
+
+
+
+    displayOverlay: boolean = false;
+    selectedItem: any;
+
+    openOverlay(event: MouseEvent, item: any) {
+        this.selectedItem = item;
+        this.overlayPanel.toggle(event);
+        this.routeMenu(item.route); 
+    }
+
+
 }
