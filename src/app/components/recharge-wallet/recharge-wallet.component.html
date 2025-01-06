@@ -73,37 +73,39 @@
 
 </div>
 
-<p-card [style]="{ width: '98%' }" styleClass="p-pl-6 p-pr-6 p-pt-5 p-pb-5">
+<div class="rachargetable">
+    <p-card [style]="{ width: '98%' }" styleClass="p-pl-6 p-pr-6 p-pt-5 p-pb-5">
 
 
-    <div class="p-d-flex p-flex-column">
-
-
-        <p-table [value]="products" styleClass="reachargetable">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Quantity</th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-product>
-                <tr>
-                    <td>{{ product.code }}</td>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.category }}</td>
-                    <td>{{ product.quantity }}</td>
-                </tr>
-            </ng-template>
-        </p-table>
-
-
-
-
-
-
-
-    </div>
-
-</p-card>
+        <div class="p-d-flex p-flex-column">
+    
+    
+            <p-table [value]="products" styleClass="reachargetable">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.quantity }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+    
+    
+    
+    
+    
+    
+    
+        </div>
+    
+    </p-card>
+</div>

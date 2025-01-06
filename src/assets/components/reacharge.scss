@@ -3,6 +3,7 @@
     justify-content: space-between;
     width: 98%;
     flex-wrap: wrap;
+    padding: 28px 10%;
 
     .rachargeForms {
         .p-card {
@@ -57,18 +58,19 @@
     }
 }
 
-
-
-.reachargetable{
-    &.p-datatable{
-        .p-datatable-wrapper{
-            border-radius: 20px;
-            .p-datatable-table{
-                .p-datatable-thead{
-                    >tr{
-                        >th{
-                            background: #eff3f8;
-                            padding: 10px;
+.rachargetable{
+    padding: 0px 10%;
+    .reachargetable{
+        &.p-datatable{
+            .p-datatable-wrapper{
+                border-radius: 20px;
+                .p-datatable-table{
+                    .p-datatable-thead{
+                        >tr{
+                            >th{
+                                background: #eff3f8;
+                                padding: 10px;
+                            }
                         }
                     }
                 }
@@ -76,3 +78,5 @@
         }
     }
 }
+
+
