@@ -1,0 +1,78 @@
+.rachargepage {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    flex-wrap: wrap;
+
+    .rachargeForms {
+        .p-card {
+            .p-card-body {
+                .p-card-content {
+
+                    .p-inputtext.reachargeInput {
+                        border-radius: 50px;
+                        padding-left: 20px;
+                        background: #eff3f8;
+
+                        &[type='text'] {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #00000085;
+                        }
+
+                        &::placeholder {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #00000085;
+                        }
+
+                    }
+
+
+                    .p-button {
+                        &.p-button-info {
+                            background: #4C63B6;
+                            border: 1px solid #4C63B6;
+                            width: 100%;
+                            padding: 8px 14px;
+                        }
+
+
+                    }
+
+                    .promocode {
+                        color: #4C63B6;
+                        font-size: 12px;
+                        font-weight: 600;
+
+                    }
+
+
+                  
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+.reachargetable{
+    &.p-datatable{
+        .p-datatable-wrapper{
+            border-radius: 20px;
+            .p-datatable-table{
+                .p-datatable-thead{
+                    >tr{
+                        >th{
+                            background: #eff3f8;
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

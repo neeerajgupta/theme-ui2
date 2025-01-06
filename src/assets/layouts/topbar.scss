@@ -124,7 +124,7 @@
     &.p-overlaypanel{
         &.left{
             left: 64px !important;
-            // top: 78px !important;
+            margin-top: -28px !important;
         }
         &::before{
             display: none;

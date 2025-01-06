@@ -7,6 +7,7 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topbar',
@@ -18,7 +19,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class TopbarComponent {
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  navigateToRecharge() {
+    this.router.navigate(['/rechargeWallet']);
+  }
+
  
 
 

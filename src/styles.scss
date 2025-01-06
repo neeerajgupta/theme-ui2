@@ -4,6 +4,10 @@
 
 @import "./assets/components/dashbord.scss";
 @import "./assets/components/login.scss";
+@import "./assets/components/invoice.scss";
+@import "./assets/components/reacharge.scss";
+
+
 
 body {
     overflow: auto;
@@ -36,6 +40,16 @@ body {
     color: #4c63b6;
 }
 
+.span{
+   color: #495057;
+   font-size: 14px;
+}
+.labelbold{
+    font-weight: 600 !important;
+    font-size: 14px;
+    color: #495057;
+}
+
 // components Csss
 .p-button {
     padding: 8px 14px;
@@ -43,6 +57,17 @@ body {
 
     .p-button-icon {
         font-size: 12px;
+    }
+    &.p-button-outlined{
+        border: 1px solid #4C63B6;
+        padding: 4px 12px;
+        margin-right: 4px;
+        color: #4C63B6;
+        &:enabled:focus {
+            box-shadow: none;
+            outline: none;
+            background: #3356d330;
+        }
     }
 }
 
@@ -168,4 +193,11 @@ body {
         height: 100vh;
     }
 
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+
+    height: 30%;
 }

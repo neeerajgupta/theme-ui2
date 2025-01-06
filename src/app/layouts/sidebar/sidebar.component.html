@@ -19,7 +19,7 @@
 
 
 
-<p-overlayPanel #op [dismissable]="true" styleClass="topbaroverlay left">
+<p-overlayPanel #op [dismissable]="true" appendTo="body" styleClass="topbaroverlay left">
     <ng-container *ngIf="selectedItem">
         <div *ngIf="selectedItem.items">
             <ul>

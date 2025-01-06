@@ -6,6 +6,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AuthenticateOtpComponent } from './components/authenticate-otp/authenticate-otp.component';
+import { InvoiceComponent } from './components/invoice/invoice.component';
+import { RechargeWalletComponent } from './components/recharge-wallet/recharge-wallet.component';
 
 export const routes: Routes = [
   {
@@ -40,5 +42,13 @@ export const routes: Routes = [
   {
     path: 'auth',
     component: AuthenticateOtpComponent
+  },
+  {
+    path: 'invoice',
+    component: InvoiceComponent
+  },
+  {
+    path: 'rechargeWallet',
+    component: RechargeWalletComponent
   }
 ];

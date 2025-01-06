@@ -19,6 +19,7 @@ import { DialogModule } from 'primeng/dialog';
 export class SidebarComponent implements OnInit {
     @ViewChild('op') overlayPanel!: OverlayPanel;
     items: any;
+body: any;
     constructor(private router: Router) { }
 
     ngOnInit() {
@@ -34,22 +35,9 @@ export class SidebarComponent implements OnInit {
                 },
                 items: [
                     {
-                        label: 'New',
-                        icon: 'pi pi-plus',
-                        items: [
-                            {
-                                label: 'Document',
-                                icon: 'pi pi-file'
-                            },
-                            {
-                                label: 'Image',
-                                icon: 'pi pi-image'
-                            },
-                            {
-                                label: 'Video',
-                                icon: 'pi pi-video'
-                            }
-                        ]
+                        label: 'Invoice',
+                        icon: 'pi pi-file-pdf',
+                        route : '/invoice',
                     },
                     {
                         label: 'Open',
