@@ -25,11 +25,11 @@ body: any;
     ngOnInit() {
         this.items = [
             {
-                label: 'File',
+                label: 'Dashboard',
                 icon: 'pi pi-home',
-                route : '/dashbord',
+                route : '/dashboard',
                 tooltipOption:{
-                    tooltipLabel:"Dashbord",
+                    tooltipLabel:"Dashboard",
                     tooltipPosition:"right"
 
                 },
@@ -65,7 +65,7 @@ body: any;
                 ]
             },
             {
-                label: 'Search',
+                label: 'Orders',
                 icon: 'pi pi-th-large',
                 route : '/order',
                 
@@ -103,13 +103,13 @@ body: any;
                        
                     },
                     {
-                        label: 'forgot',
+                        label: 'Forgot Password',
                         icon: 'pi pi-user',
                         route : '/forgotpassword',
                        
                     },
                     {
-                        label: 'register',
+                        label: 'Register',
                         icon: 'pi pi-user',
                         route : '/register',
                        
@@ -127,9 +127,6 @@ body: any;
     }
 
     routeMenu(route : any) {
-        console.log('hi')
-       
-        console.log(route)
         this.router.navigate([`${route}`])
        
     }

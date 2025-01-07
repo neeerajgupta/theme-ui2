@@ -2,9 +2,9 @@
 
 
 
-    <div class="rachargeForms">
+    <div class="rachargeForms p-grid">
 
-        <p-card [style]="{ width: '100%' }" styleClass="p-pl-4 p-pr-4 p-pt-6 p-pb-3">
+        <p-card class="p-col-4" [style]="{ width: '100%', height: '100%' }" styleClass="p-pl-4 p-pr-4 p-pt-6 p-pb-3">
             <div class="p-d-flex p-flex-column">
 
                 <div class="p-d-flex p-jc-between">
@@ -13,9 +13,9 @@
                         <h1 class="p-mt-0"> <img src="../../../assets/wallet-svgrepo-com.svg" alt="" height="26px" width="26px"> Your
                             Wallet</h1>
 
-                        <label class="span">Balance</label>
+                        <h3>Balance</h3>
 
-                        <h3 class="color-lightbule ">₹ <i class="p-ml-1">0</i></h3>
+                        <h3 class="color-lightbule p-mt-0">₹ <i class="p-ml-1">20,000</i></h3>
                     </div>
 
                     <div class="p-d-flex p-ai-center">
@@ -39,17 +39,13 @@
 
         </p-card>
 
-    </div>
-
-    <div class="rachargeForms">
-
-        <p-card [style]="{ width: '100%' }" styleClass="p-pl-4 p-pr-4 p-pt-6 p-pb-3">
+        <p-card class="p-col-6" [style]="{ width: '100%', height: '100%' }" styleClass="p-pl-4 p-pr-4 p-pt-6 p-pb-3">
             <div class="p-d-flex ">
-                <input type="text"  pInputText placeholder="₹ 20000" class=" p-mr-4 reachargeInput" />
+                <input type="text"  pInputText placeholder="₹ 20000" class="p-mr-2 reachargeInput" />
 
                 <p-button label="Recharge" [rounded]="true" severity="secondary" styleClass="p-button-info" />
             </div>
-            <div class="p-d-flex p-mt-2 p-mb-2">
+            <div class="p-d-flex p-mt-4 p-mb-4">
                 <p-button label="₹ 2000" [outlined]="true" [rounded]="true" severity="secondary" styleClass="p-button-select" />
                 <p-button label="₹ 3000" [outlined]="true" [rounded]="true" severity="secondary" styleClass="p-button-select" />
                 <p-button label="₹ 4000" [outlined]="true" [rounded]="true" severity="secondary" styleClass="p-button-select" />
@@ -61,7 +57,7 @@
             <a class="promocode " >You have Promocode?</a>
             <div class="p-d-flex p-mt-2">
               
-                <input type="text"  pInputText placeholder="Enter Your code" class=" p-mr-4 reachargeInput" />
+                <input type="text"  pInputText placeholder="Enter your code" class="p-mr-2 reachargeInput" />
 
                 <p-button label="Apply" [rounded]="true" severity="secondary" styleClass="p-button-info" />
             </div>
@@ -72,7 +68,7 @@
 
 
 </div>
-
+<!-- 
 <div class="rachargetable">
     <p-card [style]="{ width: '98%' }" styleClass="p-pl-6 p-pr-6 p-pt-5 p-pb-5">
 
@@ -108,4 +104,4 @@
         </div>
     
     </p-card>
-</div>
+</div> -->

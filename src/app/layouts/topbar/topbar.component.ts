@@ -22,7 +22,7 @@ export class TopbarComponent {
   constructor(private router: Router) {}
 
   navigateToRecharge() {
-    this.router.navigate(['/rechargeWallet']);
+    this.router.navigate(['/recharge-wallet']);
   }
 
  

@@ -8,47 +8,59 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { AuthenticateOtpComponent } from './components/authenticate-otp/authenticate-otp.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { RechargeWalletComponent } from './components/recharge-wallet/recharge-wallet.component';
+import { LayoutComponent } from './layouts/layout/layout.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashbord',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
   {
-    path: 'dashbord',
-    component: DashbordComponent
+    path: '',
+    component: LayoutComponent,
+    children : [
+      {
+        path: '',
+        loadComponent: () => import('./components/dashbord/dashbord.component').then(m => m.DashbordComponent)
+      },
+      {
+        path: 'dashboard',
+        loadComponent: () => import('./components/dashbord/dashbord.component').then(m => m.DashbordComponent)
+      },
+      {
+        path: 'new-order',
+        loadComponent: () => import('./components/create-order/create-order.component').then(m => m.CreateOrderComponent)
+      },
+      {
+        path: 'order',
+        loadComponent: () => import('./components/orders/orders.component').then(m => m.OrdersComponent)
+      },
+      {
+        path: 'invoice',
+        loadComponent: () => import('./components/invoice/invoice.component').then(m => m.InvoiceComponent)
+      },
+      {
+        path: 'recharge-wallet',
+        loadComponent: () => import('./components/recharge-wallet/recharge-wallet.component').then(m => m.RechargeWalletComponent)
+      },
+    ]
   },
-  {
-    path: 'new-order',
-    component: CreateOrderComponent
-  },
-  {
-    path: 'order',
-    component: OrdersComponent
-  },
+ 
   {
     path: 'login',
-    component: LoginComponent
+    loadComponent: () => import('./components/login/login.component').then(m => m.LoginComponent)
   },
   {
     path: 'register',
-    component: RegisterComponent
+    loadComponent: () => import('./components/register/register.component').then(m => m.RegisterComponent)
   },
   {
     path: 'forgotpassword',
-    component: ForgotPasswordComponent
+    loadComponent: () => import('./components/forgot-password/forgot-password.component').then(m => m.ForgotPasswordComponent)
   },
   {
     path: 'auth',
-    component: AuthenticateOtpComponent
-  },
-  {
-    path: 'invoice',
-    component: InvoiceComponent
-  },
-  {
-    path: 'rechargeWallet',
-    component: RechargeWalletComponent
+    loadComponent: () => import('./components/authenticate-otp/authenticate-otp.component').then(m => m.AuthenticateOtpComponent)
   }
 ];
